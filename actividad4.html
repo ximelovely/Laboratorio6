@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2070009</title>
+    <title>Actividad 4</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- la madre esa d los íconos -->
+    <!-- Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: Louis George Cafe, sans-serif;
+            font-family: 'Louis George Cafe', sans-serif;
             background-color: #fff9fb;
             color: #333;
         }
         h1, h2, h3 {
-            font-family: Louis George Cafe, sans-serif;
+            font-family: 'Louis George Cafe', sans-serif;
             color: #d14d8b;
         }
         .navbar {
-            font-family: Louis George Cafe, sans-serif;
             background-color: #f8d7e6;
         }
         .nav-link {
@@ -30,33 +29,58 @@
             color: #d14d8b !important;
             text-decoration: underline;
         }
-        .profile-card {
+        .hobby-card {
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(209, 77, 139, 0.1);
             padding: 30px;
             margin-top: 30px;
         }
-        .btn-pink {
-            background-color: #d14d8b;
-            color: white;
+        .hobby-item {
             border: none;
-            padding: 10px 25px;
-            border-radius: 30px;
+            border-left: 4px solid #f8a5c2;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s;
+            padding: 15px;
         }
-        .btn-pink:hover {
-            background-color: #a52d65;
-            color: white;
+        .hobby-item:hover {
+            background-color: #fef0f5;
+            transform: translateX(5px);
         }
-        .img-container {
-            text-align: center;
-            margin: 30px 0;
+        .hobby-icon {
+            color: #d14d8b;
+            font-size: 1.2rem;
+            margin-right: 10px;
         }
-        .img-container img {
-            max-width: 100%;
-            border-radius: 15px;
-            border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .img-thumbnail {
+            border: 3px solid #f8d7e6;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: auto;
+            height: 200px;
+        }
+        .img-thumbnail:hover {
+            transform: scale(1.05);
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #d14d8b;
+        }
+        .hobby-section {
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -66,7 +90,7 @@
         <div class="container">
             <a class="navbar-brand">
                 <i class="fas fa-heart me-2" style="color: #d14d8b;"></i>
-                <span style="font-family: Louis George Cafe, sans-serif;; color: #a52d65;">Inicio</span>
+                <span style="font-family: 'Louis George Cafe', sans-serif; color: #a52d65;">Actividad 4</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -74,16 +98,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Inicio</a>
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="actividad1.html"><i class="fas fa-tasks me-1"></i> Actividad 1</a>
+                        <a class="nav-link active" href="actividad1.html"><i class="fas fa-smile-beam me-1"></i> Actividad 1</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="actividad2.html"><i class="fas fa-project-diagram me-1"></i> Actividad 2</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="actividad3.html"><i class="fas fa-code me-1"></i> Actividad 3</a>
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="actividad4.html"><i class="fas fa-cat me-1"></i> Actividad 4</a>
@@ -93,28 +118,16 @@
         </div>
     </nav>
 
-    <!-- Contenido principal -->
+<!-- Sección sobre Ximena -->
+<section class="text-center my-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="profile-card">
-                    <h1 class="text-center mb-4">¡Hola, soy Ximena! <i class="fas fa-heart" style="color: #f8a5c2;"></i></h1>
-                    
-                    <div class="img-container">
-                        <img src="foto.jpg" alt="Foto de Ximena" class="img-fluid">
-                    </div>
-                    
-                    <article class="mt-4">
-                        <p class="lead"><i class="fas fa-quote-left me-2" style="color: #f8a5c2;"></i> Hola, soy Ximena. Tengo 19 años y nací el 2 de octubre del 2005. Actualmente, estoy estudiando Ingeniería en Tecnología de Software, una carrera que me apasiona porque combina mi interés por la tecnología y la resolución de problemas.</p>
-                        <p>Antes de entrar a la universidad, estudié en una preparatoria técnica, donde me gradué como Técnica en Sistemas Computacionales, lo que me dio una base sólida para seguir creciendo en el mundo de la tecnología.</p>
-                        <p>En mi tiempo libre, me gusta leer, ver series y películas, y pasar tiempo con mi familia y amigos. También me gusta aprender cosas nuevas, por lo que siempre estoy buscando cursos y talleres que me permitan adquirir nuevos conocimientos y habilidades.</p>
-                        <p>Soy una persona tranquila y hogareña, disfruto pasar tiempo en casa, pero también me encanta ver deportes. Soy fanática de la lucha libre, el béisbol y el fútbol, y siempre estoy al tanto de los partidos y eventos importantes.</p>
-                        <p class="mb-4">En el futuro, me gustaría trabajar en una empresa de tecnología, donde pueda seguir aprendiendo y creciendo como profesional.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
+        <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #a52d65;">
+            Ximena es una estudiante dedicada y apasionada de Ingeniería en Tecnología de Software en FIME. 🌟
+            Siempre destaca por su creatividad, compromiso y amor por el aprendizaje.
+        </p>
     </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="mt-5 py-4 text-center" style="background-color: #f8d7e6; color: #a52d65;">
